@@ -19,7 +19,7 @@ public class CommonSteps {
 
     @Given("Web site is open")
     public void visitorWebSiteIsOpen() throws IOException {
-        SeleniumDriver.openVisitorWebSite();
+        SeleniumDriver.openPage();
     }
 
 }

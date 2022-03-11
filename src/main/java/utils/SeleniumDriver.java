@@ -43,20 +43,11 @@ public class SeleniumDriver {
         driver.manage().window().maximize();
     }
 
-    public static void openPage(String url) {
+    public static void openPage() {
+        String url = "www.google.com";
         System.out.println(url);
         driver.get(url);
     }
-
-    public static void openVisitorWebSite() throws IOException {
-        String urlProp = SeleniumHelper.getProperties().get("server").toString();
-
-        String site = System.getProperty("app.env", urlProp);
-        String url = "https://" + site + ".com";
-
-        openPage(url);
-    }
-
 
     public static WebDriver getDriver() {
         return driver;
