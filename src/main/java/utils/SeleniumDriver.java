@@ -44,7 +44,7 @@ public class SeleniumDriver {
     }
 
     public static void openPage() {
-        String url = "www.google.com";
+        String url = "https://www.google.com/";
         System.out.println(url);
         driver.get(url);
     }
