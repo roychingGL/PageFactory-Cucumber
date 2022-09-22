@@ -43,8 +43,9 @@ public class SeleniumDriver {
         driver.manage().window().maximize();
     }
 
-    public static void openPage() {
-        String url = "https://www.google.com/";
+    public static void openPage() throws IOException {
+        String urlProp = SeleniumHelper.getProperties().get("server").toString();
+        String url = System.getProperty("app.url", urlProp);
         System.out.println(url);
         driver.get(url);
     }

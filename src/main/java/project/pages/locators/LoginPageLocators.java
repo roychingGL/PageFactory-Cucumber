@@ -4,18 +4,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class LoginPageLocators {
-    @FindBy(id = "email")
-    public WebElement emailField;
+    @FindBy(id = "user_email")
+    public WebElement emailInput;
 
-    @FindBy(id = "password")
-    public WebElement passwordField;
+    @FindBy(id = "user_password")
+    public WebElement passwordInput;
 
-    @FindBy(id = "login")
-    public WebElement logOn;
-
-    @FindBy(id = "nav_contactUs2")
-    public WebElement genericContactUs;
-
-    @FindBy(id = "registerToday")
-    public WebElement registrationLink;
+    @FindBy(css = "input[class='btn btn-primary']")
+    public WebElement signInButton;
 }

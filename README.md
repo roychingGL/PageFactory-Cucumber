@@ -1,18 +1,18 @@
-# Video Visit
+# QA Assessment
 
+## Technology Stack
+Java
+Selenium
+Cucumber
+JUnit
+Maven
 
-Run the project using the command line with a specific tag:
-
+This is a maven project, so we can run the tests running.
 ```
-Run a specific Tag:
+mvn test
 ```
-mvn test -Dcucumber.filter.tags='@Regression'
 
-```
-Run a specific Feature file:
-```
-mvn test -Dcucumber.options="src/test/resources/featureFiles/FeatureName.feature"
-
+Default properties files like url, username and password are saved in src/test/resources/config.properties
 
 ## Multiple Browsers
 
@@ -23,4 +23,8 @@ mvn test -Dbrowser=chrome
 mvn test -Dbrowser=firefox
 mvn test -Dbrowser=edge
 ```
+
+## Report
+
+After running the tests, you can find the report here: target/cucumber-reports/CucumberTestReport.html
 

@@ -10,7 +10,7 @@ import io.cucumber.junit.CucumberOptions;
         features = {"src/test/resources/FeatureFiles"},
         glue = {"steps"},
         monochrome = true,
-        plugin = {"json:target/cucumber-reports/CucumberTestReport.json"},
+        plugin = {"html:target/cucumber-reports/CucumberTestReport.html"},
         tags = "@regression",
         publish = true
 )

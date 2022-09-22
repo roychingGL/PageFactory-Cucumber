@@ -3,15 +3,12 @@ package base;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
 import utils.SeleniumDriver;
-
-import static java.lang.Thread.sleep;
 
 
 public class BaseActions {
 
-    public final int waitingTime = 3000;
+    public final int waitingTime = 2500;
     BaseLocators locators = null;
 
     public BaseActions() {
@@ -35,13 +32,6 @@ public class BaseActions {
         }
     }
 
-    public void select(WebElement element, String value) {
-        if (isElementPresent(element)) {
-            Select selectObj = new Select(element);
-            selectObj.selectByVisibleText(value);
-        }
-    }
-
     public boolean isElementPresent(WebElement element) {
         try {
             element.isDisplayed();
@@ -58,14 +48,4 @@ public class BaseActions {
             return false;
         }
     }
-
-    public void waitForElement(WebElement element, int timeout) throws InterruptedException {
-       for (int i=0; i <= timeout; i++){
-           sleep(1000);
-           if (element.isDisplayed()){
-               break;
-           }
-       }
-    }
-
 }
